@@ -15,20 +15,21 @@ h1{
 }
 
 
-#container{
-    width: 100%;
-    margin-left: 3%;
+.container{
+    width: 90%;
+    margin: auto;
+
     
 
 }
 /*Para que el contenedor muestre los elementos aunque sean flotantes*/
-#container:after{
+.container:after{
     display: block;
     height: 0px;
     clear: both;
 }
-#container div{
-    width: 20%;
+.container div{
+    width: 25%;
     height: auto;
     -webkit-transition: 1s;
     -webkit-transform: 1s;
@@ -38,14 +39,14 @@ h1{
    
     
 }
-#container div img{
+.container div img{
    width: 400px;
    height: 500px;
    box-shadow: 0 0 10px #666;
    border: 5px solid #FFF
 
 }
-#container div img~span{
+.container div img~span{
 width: 410px ;
 display: block;
 opacity: 0;
@@ -54,15 +55,16 @@ color: yellow;
 background: black;
 box-shadow: 0 0 20px yellow;
 text-align: center;
-font-size: 100%;
+font-size: 115%;
 margin-bottom: 0px;
 }
+
 /*Descripcion al pasar el cursor*/
-#container div img:hover+span{
+.container div img:hover+span{
     opacity: 1;
 }
 /*Se especifica el comportamiento que tendran las imagenes al posicionar el cursor encima del contenedor*/
-#container:hover div {
+.container:hover div {
     opacity: 0.8;
     -webkit-transform: scale(0.7);
     -ms-transform: scale(0.7);
@@ -70,73 +72,93 @@ margin-bottom: 0px;
 }
 
 /*Se especifica el comportamiento que tendran las imagenes seleccionadas*/
-#container:hover div:hover{
+.container:hover div:hover{
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
     -ms-transform: scale(1);
     
 }
+
 @media screen and (max-width: 1500px){
-    #container div{
-        width: 25%;
-    }
-}
-@media screen and (max-width: 1300px){
-    #container div{
+    .container div{
         width: 30%;
+        margin: 20px;
     }
 }
+    
+
+
+@media screen and (max-width: 1300px){
+    .container{
+        width: 80%;
+    }
+    
+    .container div{
+        width: 35%;
+        margin: 40px;
+    }
+}
+
 @media screen and (max-width: 1000px){
     body{
         background-size: 100%;
     }
-    #container div{
+    .container div{
         width: 40%;
         margin: 20px;
     }
-    #container{
+    .container{
         width: 100%;
         margin:10px;
     }
-    #container div img{
+    .container div img{
         width: 400px;
         height: 500px;
     }
-    #container div img~span{
+    .container div img~span{
         width: 410px
+    }
+
 }
+
 @media screen and (max-width: 700px){
-    #container div{
+    .container div{
         width: 40%;
         margin: 20px;
     }
-    #container{
+    .container{
         width: 100%;
         margin:10px;
     }
-    #container div img{
+    .container div img{
         width: 200px;
         height: 300px;
 
     }
-    #container div img~span{
+    .container div img~span{
         width: 210px
 }
+
 @media screen and (max-width: 450px){
-    #container div{
+    h1{
+        margin-bottom: 10%;
+    }
+    .container div{
         width: 40%;
-        margin: 20px;
+        margin: 5px;
     }
-    #container{
+    .container{
         width: 100%;
-        margin:10px;
+       
     }
-    #container div img{
-        width: 200px;
-        height: 300px;
+    .container div img{
+        width: 150px;
+        height: 220px;
     }
-    #container div img~span{
-        width: 210px
+    .container div img~span{
+        width: 150px;
+        font-size: 85%;
+        
 
 }
